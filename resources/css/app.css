@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --color-brand-50: #eef6ff;
+    --color-brand-500: #2563eb;
+    --color-brand-600: #1d4ed8;
+    --color-brand-700: #1e40af;
+}
+
+@layer components {
+    .input {
+        @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-2 focus:outline-brand-500/30;
+    }
+    .input-error {
+        @apply border-red-500;
+    }
+    .btn {
+        @apply inline-flex items-center justify-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50 disabled:opacity-50;
+    }
+    .btn-primary {
+        @apply border-brand-600 bg-brand-600 text-white hover:bg-brand-700;
+    }
+    .btn-danger {
+        @apply border-red-200 text-red-700 hover:bg-red-50;
+    }
+    .card {
+        @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm;
+    }
+    .badge {
+        @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+    }
+}
